@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>快速部署CloudFlare ImgBed免费图床项目 | 米蒿的空间</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://myblog.mimihao.dpdns.org/favicon.ico?v=1764862910552">
+<link rel="stylesheet" href="https://myblog.mimihao.dpdns.org/styles/main.css">
+
+
+  
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/disqusjs@1.1/dist/disqusjs.css" />
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XHEW5VR1PZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XHEW5VR1PZ');
+</script>
+
+
+    <meta name="description" content="
+
+📂 第一步：Fork 项目
+1.访问 CloudFlare ImgBed 项目
+2.点击右上角的 &quot;Fork&quot; 按钮
+3.选择您的 GitHub 账户
+4.确认 Fork 完成
+🏗️ 第二步：创建 Pages 项..." />
+    <meta name="keywords" content="图床" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://myblog.mimihao.dpdns.org">
+        <img src="https://myblog.mimihao.dpdns.org/images/avatar.png?v=1764862910552" class="site-logo">
+        <h1 class="site-title">米蒿的空间</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      只要有一米阳光，我就能摇曳起舞了
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://myblog.mimihao.dpdns.org/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">快速部署CloudFlare ImgBed免费图床项目</h2>
+            <div class="post-date">2025-12-01</div>
+            
+              <div class="feature-container" style="background-image: url('https://github.com/MarSeventh/CloudFlare-ImgBed/raw/main/static/readme/banner.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h1 id=""></h1>
+<p><a href="https://github.com/MarSeventh/CloudFlare-ImgBed/raw/main/static/readme/banner.png"></a><br>
+📂 第一步：Fork 项目<br>
+1.访问 <a href="https://github.com/MarSeventh/CloudFlare-ImgBed?tab=readme-ov-file" title="CloudFlare ImgBed 项目">CloudFlare ImgBed 项目</a><br>
+2.点击右上角的 &quot;Fork&quot; 按钮<br>
+3.选择您的 GitHub 账户<br>
+4.确认 Fork 完成<br>
+🏗️ 第二步：创建 Pages 项目<br>
+2.1 访问 Cloudflare Dashboard<br>
+1.登录 Cloudflare Dashboard<br>
+2.选择左侧菜单的 &quot;计算和AI&quot; -&gt; &quot;Workers &amp; Pages&quot;<br>
+3.点击 &quot;创建应用程序&quot;<br>
+4.在最下方 Looking to deploy Pages? 选择 &quot;Get started&quot;<br>
+5.在 &quot;导入现有 Git 存储库&quot; 处点击 &quot;开始使用&quot;</p>
+<p>2.2 连接 GitHub 仓库<br>
+1.如果首次使用，需要授权 Cloudflare 访问 GitHub<br>
+2.选择您 Fork 的 CloudFlare-ImgBed 仓库<br>
+3.点击 &quot;开始设置&quot;<br>
+2.3 配置项目设置<br>
+1.配置项	值	说明<br>
+项目名称	cloudflare-imgbed（或自定义）	项目标识符<br>
+生产分支	main	生产环境分支<br>
+构建命令	npm install	重要：v2.0 新构建命令<br>
+构建输出目录	/	保持默认<br>
+配置项目设置</p>
+<p>重要提醒：<br>
+v2.0 版本的构建命令已变更为 npm install，请确保使用正确的构建命令。<br>
+2.4 部署项目<br>
+点击 &quot;保存并部署&quot;<br>
+等待首次部署完成（约 2-3 分钟）<br>
+🗄️ 第三步：配置数据库<br>
+数据库用于存储文件元数据，是必需的组件，可选数据库为 KV 数据库和 D1 数据库。两者对比如下表所示，根据自己使用场景从其中选择一种配置即可。</p>
+<p>特点	KV 数据库	D1 数据库<br>
+读写性能	高	较低<br>
+免费额度	少	多<br>
+大文件上传	支持	不支持<br>
+3.1 KV 数据库配置<br>
+创建 KV 命名空间<br>
+在 Cloudflare Dashboard 中选择 &quot;存储和数据库&quot;<br>
+点击 &quot;Workers KV&quot;<br>
+点击 &quot;创建实例&quot;<br>
+输入命名空间名称：img_url（建议使用此名称）<br>
+点击 &quot;创建&quot;<br>
+创建 KV 命名空间创建 KV 命名空间</p>
+<p>绑定 KV 到项目<br>
+返回您的 Pages 项目<br>
+选择 &quot;设置&quot; → &quot;绑定&quot;<br>
+点击 &quot;添加&quot; → &quot;KV 命名空间&quot;<br>
+填写绑定信息：<br>
+变量名称：img_url（必须是这个名称）<br>
+KV 命名空间：选择刚创建的命名空间<br>
+点击 &quot;保存&quot;<br>
+注意</p>
+<p>绑定 KV 时，变量名称必须为 img_url，这是项目预设的变量名，填错会出现无法进入管理界面等情况。</p>
+<p>3.2 D1 数据库配置<br>
+创建 D1 数据库<br>
+在 Cloudflare Dashboard 中选择 &quot;存储和数据库&quot;<br>
+点击 &quot;D1 SQL 数据库&quot;<br>
+点击 &quot;创建数据库&quot;<br>
+输入数据库名称：img_d1（建议使用此名称）<br>
+点击 &quot;创建&quot;<br>
+初始化 D1 数据库<br>
+创建完成后，点击进入数据库详情页<br>
+选择 &quot;控制台&quot; 选项卡<br>
+在 SQL 输入框中逐段粘贴并执行初始化语句（见项目仓库）<br>
+点击 &quot;执行&quot;<br>
+绑定 D1 到项目<br>
+返回您的 Pages 项目<br>
+选择 &quot;设置&quot; → &quot;绑定&quot;<br>
+点击 &quot;添加&quot; → &quot;D1 数据库&quot;<br>
+填写绑定信息：<br>
+变量名称：img_d1（必须是这个名称）<br>
+D1 数据库：选择刚创建的数据库<br>
+点击 &quot;保存&quot;<br>
+🔄 第四步：重新部署<br>
+绑定数据库后需要重新部署以生效：</p>
+<p>进入项目的 &quot;部署&quot; 页面<br>
+找到最新的部署记录<br>
+点击右侧的 &quot;...&quot; 菜单<br>
+选择 &quot;重试部署&quot;<br>
+等待部署完成<br>
+重新部署</p>
+<p>🚀 下一步<br>
+至此已经完成项目在 Cloudflare Pages 的部署，但是尚未添加存储渠道，添加存储渠道和进行其他设置的方式请参考 配置说明。<br>
+配置说明<br>
+本章节详细介绍 CloudFlare ImgBed 的各种配置选项和自定义设置。</p>
+<p>🗂️ 存储渠道配置<br>
+部署完成后访问您的域名，进入管理后台配置存储渠道。</p>
+<p>访问管理后台<br>
+访问 https://your-domain/dashboard</p>
+<p>提示</p>
+<p>管理后台默认无需密码，登录后请及时设置管理员用户名和密码。</p>
+<p>配置 Telegram 渠道<br>
+左上角菜单栏进入 &quot;系统设置&quot; → &quot;上传设置&quot;<br>
+找到 &quot;Telegram 渠道配置&quot;<br>
+点击 &quot;添加渠道&quot;<br>
+填入准备好的 Token 和 Chat ID：<br>
+渠道名称：自定义名称（如：主渠道）<br>
+Bot Token：从 @BotFather 获得的 Token<br>
+Chat ID：频道 ID（有-号时需要保留）<br>
+启用状态：开启<br>
+点击 &quot;保存设置&quot;<br>
+配置 R2 渠道<br>
+服务器部署时默认添加了 Cloudflare R2 存储方式，以下步骤仅针对 Cloudflare 部署方式：</p>
+<p>在项目设置中绑定 R2 存储桶：<br>
+选择 &quot;设置&quot; → &quot;绑定&quot;<br>
+添加 &quot;R2 存储桶&quot;<br>
+变量名称：img_r2<br>
+R2 存储桶：选择已创建的存储桶<br>
+配置 R2 渠道</p>
+<p>在管理后台配置：<br>
+进入 &quot;系统设置&quot; → &quot;上传设置&quot;<br>
+配置 R2 渠道参数<br>
+如需图像审查，填入 R2 公开访问链接<br>
+提示</p>
+<p>请注意Cloudflare R2 的免费额度限制，超过后可能会产生费用。注意</p>
+<p>配置 S3 渠道<br>
+在管理后台的 S3 渠道配置中填入：</p>
+<p>Access Key ID：访问密钥 ID<br>
+Secret Access Key：机密访问密钥<br>
+Bucket Name：存储桶名称<br>
+Endpoint：服务端点（完整 URL，如 https://s3.us-east-005.backblazeb2.com）<br>
+PathStyle：路径样式（如需兼容旧 S3 版本，开启此选项）<br>
+Region：存储区域（可选）<br>
+🔒 安全设置<br>
+安全相关设置，在管理后台的 &quot;系统设置&quot; → &quot;安全设置&quot; 中配置</p>
+<p>认证管理<br>
+用户端认证：用于 Web 端用户登录和 API 认证<br>
+管理端认证： 管理员用户名和密码，用于访问管理后台<br>
+上传管理<br>
+图像审查<br>
+审查渠道支持 nsfwjs 和 moderatecontent.com，项目自带默认审查渠道（nsfwjs），但不做服务可用性保证，如需高频使用审查功能，建议根据如下步骤自行配置。</p>
+<p>1.moderatecontent.com<br>
+访问 ModerateContent<br>
+注册并获取免费 API Key（目前已不再支持免费注册）<br>
+在管理后台 &quot;系统设置&quot; → &quot;安全设置&quot; 中填入 API Key<br>
+2.nsfwjs<br>
+使用 Docker 部署 nsfwjs 审查服务</p>
+<h1 id="参考命令">参考命令</h1>
+<p>docker run -d -p 127.0.0.1:5000:5000/tcp <br>
+--env PORT=5000 <br>
+--restart=always <br>
+eugencepoi/nsfw_api:latest<br>
+在管理后台 &quot;系统设置&quot; → &quot;安全设置&quot; 中填入审查服务地址，如 https://nsfwjs.your.domain<br>
+访问管理<br>
+域名过滤<br>
+放行域名：允许访问的域名列表（留空放行所有域名，否则需要手动添加图床自身域名）<br>
+白名单模式：启用后仅允许加入白名单的文件被访问<br>
+🌐 网页设置<br>
+前端网页相关设置，在管理后台的 &quot;系统设置&quot; → &quot;网页设置&quot; 中配置</p>
+<p>字段名	用途	类型	内容规范<br>
+siteTitle	网站标题	字符串	只支持字符串类型，设置为你自定义的网站标题<br>
+siteIcon	网站图标	字符串	只支持字符串类型，设置为你自定义的网站图标链接<br>
+ownerName	图床名称	字符串	只支持字符串类型，设置为你自定义的图床名称（默认为Sanyue）<br>
+logoUrl	图床Logo	字符串	只支持字符串类型，设置为你自定义的图床Logo链接<br>
+bkInterval	背景切换间隔	正整数	设置为背景图的轮播时间，默认3000，单位ms。<br>
+例如你希望10s切换一次，设置为10000即可。<br>
+bkOpacity	背景图透明度	(0,1]的浮点数	展示的背景图透明度，默认为1。<br>
+如果你觉得显示效果不佳，可以自定义，如0.8<br>
+urlPrefix	默认 URL 前缀	字符串	只支持字符串类型，设置为自定义的全局默认链接前缀，该前缀会覆盖原始默认前缀，但不会覆盖用户自定义的链接前缀<br>
+announcement	公告	字符串	只支持字符串类型，可以为 HTML 格式，设置为你自定义的公告内容（如有）<br>
+defaultUploadChannel	默认上传渠道	字符串	只支持字符串类型，设置为你自定义的默认上传渠道，支持telegram（Telegram 渠道）、cfr2（Cloudflare R2）和s3（S3 渠道）<br>
+defaultUploadNameType	默认命名方式	字符串	只支持字符串类型，设置为你自定义的默认上传文件命名方式，支持default（默认）、index（仅前缀）、original（仅原名）和short（短链接）<br>
+loginBkImg	登录页背景图	列表/字符串	1、当字段类型为列表时，列表中元素为需要添加到轮播列表中的图片链接（列表中只有一张图时即为固定背景），形如[&quot;1.jpg&quot;,&quot;2.jpg&quot;]<br>
+2、当字段类型为字符串时，目前仅支持字符串值为bing，设置为该值时启用bing随机图片轮播模式。<br>
+uploadBkImg	上传页背景图	列表/字符串	同loginBkImg<br>
+footerLink	页脚传送门链接	字符串	只支持字符串类型，设置为你自定义的传送地址（如个人博客链接）<br>
+disableFooter	隐藏页脚	boolean	支持boolean类型，设为true时禁用页脚，默认false<br>
+adminLoginBkImg	管理页背景图	列表/字符串	同loginBkImg<br>
+🛠️ 其他设置<br>
+其他设置项，在管理后台的 &quot;系统设置&quot; → &quot;其他设置&quot; 中配置</p>
+<p>远端遥测<br>
+便于开发者进行bug的捕捉和定位，但是过程中可能收集到访问链接、域名等信息，如您不愿意泄露类似信息给项目开发者，请在管理后台禁用此功能。</p>
+<p>随机图像 API<br>
+目录：开放随机图权限的目录，默认为根目录，多个目录用逗号分隔；目录均采用绝对路径，例如/img/cover，表示该目录及其所有子目录的文件可被随机图API访问。<br>
+CloudFlare API Token<br>
+正常情况下，因为CloudFlare CDN缓存的存在，在管理端进行删除、拉黑、加白名单等操作不会立即生效，需要等到缓存过期才能生效。为了让操作立即生效，建议设置此项，设置方式如下：</p>
+<p>CF_ZONE_ID：绑定域名的 Cloudflare Zone ID获取方法<br>
+CF_EMAIL：Cloudflare 账户邮箱<br>
+CF_API_KEY：Cloudflare Global API Key获取方法<br>
+WebDAV<br>
+WebDAV 服务相关设置，详细介绍和使用方式请查看 API 文档。</p>
+<p>启用 WebDAV 服务：开启或关闭 WebDAV 服务<br>
+用户名：WebDAV 登录用户名<br>
+密码：WebDAV 登录密码<br>
+🔧 环境变量清单<br>
+注意</p>
+<p>环境变量设置方式在 v2.0 版本后已废弃，以下配置请在管理后台进行。</p>
+<p>基础认证配置<br>
+变量名	类型	必需	说明	示例值<br>
+https://github.com/MarSeventh/CloudFlare-ImgBed/raw/main/static/readme/banner.png<br>
+BASIC_USER	string	否	管理员用户名	admin<br>
+BASIC_PASS	string	否	管理员密码	your_secure_password<br>
+AUTH_CODE	string	否	上传认证码	your_auth_code<br>
+存储渠道配置<br>
+Telegram 渠道<br>
+变量名	类型	必需	说明	示例值<br>
+TG_BOT_TOKEN	string	是	Telegram Bot Token	123456789:ABCdefGHI...<br>
+TG_CHAT_ID	string	是	Telegram 频道 ID	-1001234567890<br>
+功能开关配置<br>
+变量名	类型	默认值	说明<br>
+AllowRandom	boolean	false	启用随机图 API<br>
+WhiteList_Mode	boolean	false	启用白名单模式<br>
+disable_telemetry	boolean	false	禁用遥测数据<br>
+安全配置<br>
+变量名	类型	说明	示例值<br>
+ALLOWED_DOMAINS	string	允许访问的域名列表	domain1.com,domain2.com<br>
+ModerateContentApiKey	string	图像内容审查 API Key	your_api_key<br>
+CDN 缓存配置<br>
+变量名	类型	说明	用途<br>
+CF_ZONE_ID	string	Cloudflare Zone ID	自动清除 CDN 缓存<br>
+CF_EMAIL	string	Cloudflare 账户邮箱	自动清除 CDN 缓存<br>
+CF_API_KEY	string	Cloudflare Global API Key	自动清除 CDN 缓存</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://myblog.mimihao.dpdns.org/tag/PNfj2q6buX/" class="tag">
+                    图床
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://myblog.mimihao.dpdns.org/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+
+              
+                <div id="disqus_thread" data-aos="fade-in"></div>
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+
+  
+    <script src="https://unpkg.com/disqusjs@1.1/dist/disqus.js"></script>
+    <script>
+
+    var options = {
+      shortname: 'mihao',
+      apikey: 'O0HhHpc61CdyxbO6s0jHLFgs9QtCq1Q4YoON9MX9j4Vxawb1LruSQxtfTHvik0Xb',
+    }
+    if ('https://disqus.com/api/oauth/2.0/authorize/') {
+      options.api = 'https://disqus.com/api/oauth/2.0/authorize/'
+    }
+    var dsqjs = new DisqusJS(options)
+
+    </script>
+  
+
+
+
+
+  </body>
+</html>
